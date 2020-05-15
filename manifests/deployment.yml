@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "aksc1"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "aksc1"
+    spec:
+      containers:
+        - name: "aksc1"
+          image: "contraconreg1.azurecr.io/aksc1"
+          ports:
+          - containerPort: 80
